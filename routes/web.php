@@ -1,0 +1,107 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('index',
+[
+    'as'=>'trang-chu',
+    'uses'=>'PageController@getIndex'
+]);
+Route::get('show/{id}',
+[
+    'as'=>'show',
+    'uses'=>'PageController@getDetailDistrict'
+]);
+Route::get('show2/{id}',
+[
+    'as'=>'show2',
+    'uses'=>'PageController@getDetailWard'
+]);
+Route::get('nhanvien',
+[
+    'as'=>'nhanvien',
+    'uses'=>'PageController@getEmployee'
+]);
+Route::get('phongban',
+[
+    'as'=>'phongban',
+    'uses'=>'PageController@getDeparment'
+]);
+
+Route::get('employees/{id}',
+[
+    'as'=>'employees',
+    'uses'=>'PageController@getDetailEmployee'
+]);
+Route::get('nganhang',
+[
+    'as'=>'nganhang',
+    'uses'=>'PageController@getBank'
+]);
+Route::get('vitri',
+[
+    'as'=>'vitri',
+    'uses'=>'PageController@getPosition'
+]);
+Route::get('edit/{id}',
+[
+    'as'=>'edit',
+    'uses'=>'PageController@editPosition'
+]);
+Route::get('update/{id}',
+[
+    'as'=>'update',
+    'uses'=>'PageController@updatePosition'
+]);
+Route::get('editBank/{id}',
+[
+    'as'=>'editBank',
+    'uses'=>'PageController@editBank'
+]);
+Route::get('updateBank/{id}',
+[
+    'as'=>'updateBank',
+    'uses'=>'PageController@updateBank'
+]);
+Route::get('editDepartment/{id}',
+[
+    'as'=>'editDepartment',
+    'uses'=>'PageController@editDepartment'
+]);
+Route::get('updateDepartment/{id}',
+[
+    'as'=>'updateDepartment',
+    'uses'=>'PageController@updateDepartment'
+]);
+Route::get('deletePosition/{id}',
+[
+    'as'=>'deletePosition',
+    'uses'=>'PageController@deletePosition'
+]);
+Route::get('deleteBank/{id}',
+[
+    'as'=>'deleteBank',
+    'uses'=>'PageController@deleteBank'
+]);
+Route::get('deleteDepartment/{id}',
+[
+    'as'=>'deleteDepartment',
+    'uses'=>'PageController@deleteDepartment'
+]);
+Route::get('detailEmployee/{id}',
+[
+    'as'=>'detailEmployee',
+    'uses'=>'PageController@getdetailEmployee1'
+]);
